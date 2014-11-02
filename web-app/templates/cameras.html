@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% set active_page = 'cameras' %} 
+{% block title %}Cameras{% endblock %}
+
+{% block content %}
+<div class="container-12">
+	
+	{% for cam in cams: %}
+		<div class="panel panel-default grid-6">
+			<div class="panel-body">
+				<img src="{{ cam['url'] }}:{{ cam['port'] }}/{{ cam['stream'] }}" width=500>
+			</div>
+			<div class="panel-footer">{{ cam['name'] }}</div>
+		</div>	
+	{% endfor %}
+</div>
+{% endblock %}

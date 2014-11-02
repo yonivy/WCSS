@@ -1,0 +1,21 @@
+<config first="true">
+  <user>
+    <name></name>
+    <email></email>
+    <password></password>
+  </user>
+  <localServer>
+    <url></url>
+    <port></port>
+  </localServer>
+  <webAppServer>
+    <url></url>
+    <port>
+    </port>
+  </webAppServer>
+  <motionDetection on="false">
+    <alerts>false</alerts>
+  </motionDetection>
+  <cameras>
+  </cameras>
+</config>

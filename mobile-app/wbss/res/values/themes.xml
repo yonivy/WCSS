@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- the theme applied to the application or activity -->
+    <style name="WbssActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/WbssActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="WbssActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/action_bar_bg</item>
+        <item name="android:titleTextStyle">@style/WbssActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="WbssActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/action_bar_text</item>
+    </style>
+
+</resources>

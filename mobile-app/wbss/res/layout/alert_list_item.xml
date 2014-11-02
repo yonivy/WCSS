@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@color/alert_item_bg_unread"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <CheckBox
+        android:id="@+id/alert_cbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <ImageButton
+        android:id="@+id/video_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_action_video"
+        android:contentDescription="@string/alert_video_icon_desc" />
+
+    <TextView
+        android:id="@+id/camera_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/alert_cbx"
+        android:layout_alignBottom="@+id/alert_cbx"
+        android:layout_toRightOf="@+id/alert_cbx"
+        android:textSize="@dimen/alert_text" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_alignBaseline="@+id/alert_cbx"
+        android:layout_alignBottom="@+id/alert_cbx"
+        android:layout_marginRight="@dimen/alert_text_margin"
+        android:layout_toLeftOf="@+id/video_btn"
+        android:textSize="@dimen/alert_text" />
+
+</RelativeLayout>

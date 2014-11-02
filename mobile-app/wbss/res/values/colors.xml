@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_bg">#e5e5e5</color>
+    
+    <color name="action_bar_bg">#5bc0de</color>
+    <color name="action_bar_text">#3b3b3b</color>
+    
+    <color name="nav_drawer_bg">#ffffff</color>
+    <color name="nav_drawer_item_text">#3b3b3b</color>
+    <color name="nav_drawer_item_pressed">#efefef</color>
+    
+    <color name="login_bg">#5bc0de</color>
+    <color name="login_text">#3b3b3b</color>
+    <color name="login_text_bg">#ffffff</color>
+    <color name="login_button">#0088cc</color>
+    
+    <color name="alert_item_bg_unread">#ffffff</color>
+    <color name="alert_item_bg_read">#e5e5e5</color>
+</resources>

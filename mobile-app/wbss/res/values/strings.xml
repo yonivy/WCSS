@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WBSS</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Drawer opened</string>
+    <string name="drawer_close">Drawer closed</string>
+    <string name="drawer_icon_desc">Icon</string>
+    
+    <string name="parse_app_id">rrXt4pI1S7jo2E4kezSzmDce3CGd4EZbFVas7CM8</string>
+    <string name="parse_client_key">s5iJJUtMMQQftYK4D9xf5UgZlYVyYtELXth1rkM5</string>
+    
+    <string name="login_button">Login</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_logo_desc">Application logo</string>
+    
+    
+    <string name="alert_video_icon_desc">Video icon</string>
+    
+    <string name="alert_option_menu_item_read">Mark as read</string>
+    <string name="alert_option_menu_item_unread">Mark as unread</string>
+    <string name="alert_option_menu_item_delete">Delete</string>
+    
+    <string name="camera_item_md">Motion Detection</string>
+    <string name="camera_item_alerts">Alerts</string>
+    
+    <string name="settings_item_md_on">Motion Detection On</string>
+    <string name="settings_item_alerts_on">Alerts On</string>
+    <string name="settings_item_md_off">Motion Detection Off</string>
+    <string name="settings_item_alerts_off">Alerts Off</string>
+
+</resources>

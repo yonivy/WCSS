@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#page-wrapper {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+/**********************************************************************
+*
+* CONTAINERS
+*
+* Containers are used for...
+*
+**********************************************************************/
+
+.container-1, .container-2, .container-3, .container-4,
+.container-5, .container-6, .container-7, .container-8,
+.container-9, .container-10, .container-11, .container-12 {
+	float: left;
+}
+
+.container-1 { width: 90px; }
+.container-2 { width: 180px; }
+.container-3 { width: 270px; }
+.container-4 { width: 360px; }
+.container-5 { width: 450px; }
+.container-6 { width: 540px; }
+.container-7 { width: 630px; }
+.container-8 { width: 720px; }
+.container-9 { width: 810px; }
+.container-10 { width: 900px; }
+.container-11 { width: 990px; }
+.container-12 { width: 1080px; }
+
+/**********************************************************************
+*
+* GRIDS
+*
+* Grids are used for...
+*
+**********************************************************************/
+
+.grid-1, .grid-2, .grid-3, .grid-4,
+.grid-5, .grid-6, .grid-7, .grid-8,
+.grid-9, .grid-10, .grid-11, .grid-12 {
+	min-height: 80px;
+	margin: 5px 5px;
+	float: left;
+}
+
+.grid-1 { width: 80px; }
+.grid-2 { width: 170px; }
+.grid-3 { width: 260px; }
+.grid-4 { width: 350px; }
+.grid-5 { width: 440px; }
+.grid-6 { width: 530px; }
+.grid-7 { width: 620px; }
+.grid-8 { width: 710px; }
+.grid-9 { width: 800px; }
+.grid-10 { width: 890px; }
+.grid-11 { width: 980px; }
+.grid-12 { width: 1070px; }
+
+/**********************************************************************
+*
+* UTILITIES
+*
+* Some utilities for general use.
+*
+**********************************************************************/
+
+.drag-left {
+	float: left;
+}
+
+.drag-right {
+	float: right;
+}
+
+.push-down {
+	margin-top: 40px;
+}
+
+.padded {
+	padding: 10px 15px;
+}

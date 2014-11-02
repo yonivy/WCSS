@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% set active_page = 'alerts' %} 
+{% block title %}Alerts{% endblock %}
+{% block content %}
+<div class="container-12">
+	<div class="grid-12">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			Action <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu padded" role="menu">
+				<li id="mark-read">Mark as read</li>
+				<li id="mark-unread">Mark as unread</li>
+				<li class="divider"></li>
+				<li id="delete">Delete</li>
+			</ul>
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Location</th>				
+					<th>Date</th>
+					<th>Time</th>
+					<th>Link</th>
+				</tr>	
+			</thead>
+			<tbody>
+				{% for alert in alerts: %}
+					<tr {% if alert['read'] == 'true' %}class="info"{% endif %}>	
+						<td><input type="checkbox" id="{{ alert['id'] }}" name="alert-cb"></td>
+						<td>{{ alert['camera'] }}</td>
+						<td>{{ alert['date'] }}</td>
+						<td>{{ alert['time'] }}</td>
+						<td>
+							<a href="{{ alert['link'] }}" class="html5lightbox" data-width="480" data-height="320" title="{{ alert['camera'] }}">Watch</a>
+						</td>
+					</tr>			
+				{% endfor %}
+			</tbody>
+		</table>		
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="../static/html5lightbox/html5lightbox.js"></script>
+<script type="text/javascript">
+    var html5lightbox_options = {
+        watermark: "http://html5box.com/images/html5boxlogo.png",
+        watermarklink: ""
+    };
+</script>
+<script type="text/javascript" src="../static/js/alerts.js"></script>
+{% endblock %}

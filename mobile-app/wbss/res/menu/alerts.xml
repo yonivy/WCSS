@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mark_read"
+        android:title="@string/alert_option_menu_item_read"/>
+    <item
+        android:id="@+id/mark_unread"
+        android:title="@string/alert_option_menu_item_unread"/>
+    <item
+        android:id="@+id/delete"
+        android:title="@string/alert_option_menu_item_delete"/>
+
+</menu>

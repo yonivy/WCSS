@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% set active_page = 'settings' %} 
+{% block title %}Settings{% endblock %}
+{% block content %}
+<div class="container-12">
+	<div class="grid-2">
+		<ul class="nav nav-pills nav-stacked">
+		  	<li class="active"><a href="#md-settings" data-toggle="tab">Motion Detection Settings</a></li>
+	  		<li><a href="#cameras-settings" data-toggle="tab">Cameras Settings</a></li>
+		</ul>
+	</div>
+
+	<div class="grid-10 tab-content">
+		
+		<div id="md-settings" class="panel panel-default tab-pane active">
+			<div class="panel-heading">Motion Detection Settings</div>
+			<div class="panel-body">
+				<form id="md-settings-form" class="form" role="form">
+					<div class="form-group">
+						<div class="input-group col-sm-4">
+				      		<span class="input-group-addon">
+					        	<input type="checkbox" name="md-on" id="md-on" class="md-check" {% if md['on'] == 'true' %}checked{% endif %}>
+					      	</span>
+					      	<span class="form-control" name="md-on-text" id="md-on-text">
+				      		{% if md['on'] == 'true' %}
+					      		Motion Detection On
+							{% else %}
+								Motion Detection Off
+					      	{% endif %}
+					      	</span>
+					    </div>
+					    				    
+					</div>
+
+					<div class="form-group">
+						<div class="input-group col-sm-4">
+				      		<span class="input-group-addon">
+					        	<input type="checkbox" name="alerts-on" id="alerts-on" class="alerts-check" {% if md['alerts'] == 'true' %}checked{% endif %}>
+					      	</span>
+					      	<span class="form-control" name="alerts-on-text" id="alerts-on-text">
+					      		{% if md['alerts'] == 'true' %}
+					      			Alerts On
+					      		{% else %}
+					      			Alerts Off
+					      		{% endif %}
+					      	</span>
+					    </div>					    
+					</div>					
+					<div class="form-group">
+						<div class="input-group col-sm-12">
+							<button type="submit" class="btn btn-success pull-right"><span class="glyphicon glyphicon-save"></span> Save Changes</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="cameras-settings" class="tab-pane">
+			<div class="panel panel-default">
+			  	<div class="panel-body">Cameras Settings</div>
+			</div>
+
+			{% for cam in cams: %}
+				<div class="panel panel-default">
+					<div class="panel-heading">Camera {{ cam['id'] }} Settings : {{ cam['name'] }}</div>
+					<div class="panel-body">
+						<form class="form cam-form" id="camera-{{ cam['id'] }}-settings-form" role="form" >		
+							<div class="form-group">
+
+								<div class="input-group col-sm-12">
+						      		<span class="input-group-addon">
+							        	<input type="checkbox" name="cam-{{ cam['id'] }}-md-on" id="cam-{{ cam['id'] }}-md-on" class="md-check" {% if cam['md'] == 'true' %}checked{% endif %}>
+							      	</span>
+							      	<span class="form-control" name="cam-{{ cam['id'] }}-md-on-text" id="cam-{{ cam['id'] }}-md-on-text">{% if cam['md'] == 'true' %}
+							      		Motion Detection On
+									{% else %}
+										Motion Detection Off
+							      	{% endif %}
+							      	</span>
+							    </div>
+							    
+						    	<div class="input-group col-sm-12 add-margin-tb">
+								    	<span class="input-group-addon">Motion Detection Threshold</span>
+										<input type="range" name="cam-{{ cam['id'] }}-threshold" id="cam-{{ cam['id'] }}-threshold" class="form-control md-slider" min="1" max="5" value="{{ cam['threshold'] }}">
+										<span class="input-group-addon" id="cam-{{ cam['id'] }}-threshold-val">{{ cam['threshold'] }}</span>
+								</div>
+							</div>
+								
+							
+							<div class="form-group">
+								<div class="input-group col-sm-12">
+						      		<span class="input-group-addon">
+							        	<input type="checkbox" name="cam-{{ cam['id'] }}-alerts-on" id="cam-{{ cam['id'] }}-alerts-on" class="alerts-check" {% if cam['alerts'] == 'true' %}checked{% endif %}>
+							      	</span>
+							      	<span class="form-control" name="cam-{{ cam['id'] }}-alerts-on-text" id="cam-{{ cam['id'] }}-alerts-on-text">
+							      		{% if cam['alerts'] == 'true' %}
+							      			Alerts On
+							      		{% else %}
+							      			Alerts Off
+							      		{% endif %}
+							      	</span>
+							    </div>
+							    
+							    <div class="input-group col-sm-12 add-margin-tb">
+									<span class="input-group-addon">Recording Time</span>
+									<input type="text" name="cam-{{ cam['id'] }}-rec-time" id="cam-{{ cam['id'] }}-rec-time" class="form-control" placeholder="Enter recording time" pattern="[0-5][0-9]:[0-5][0-9]" value="{{ cam['rec_time'] }}">
+								</div>
+							</div>
+							
+
+							<div class="form-group">
+								<div class="input-group col-sm-12">	
+									<div class="pull-right">
+										<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"></span> Save Changes</button>								
+									</div>
+								</div>	
+							</div>						
+							
+						</form>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="../static/js/settings.js"></script>
+<script src="../static/js/validator.min.js"></script>
+{% endblock %}
